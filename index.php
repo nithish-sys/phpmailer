@@ -50,7 +50,8 @@ $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
                         if (mail($to, $subject, $message, $headers)) {
                             echo "mail send";
                         } else {
-                            echo "fail";
+                            $msg = error_get_last()['message'];
+                            echo $msg;
                         }
                         $sql = "select * from `subscriber` order by id desc";
                         $result = mysqli_query($con, $sql);
