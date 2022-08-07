@@ -50,7 +50,7 @@ $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
                         if (mail($to, $subject, $message, $headers)) {
                             echo "mail send";
                         } else {
-                            $msg = error_get_last()['message'];
+                            $msg = error_get_last();
                             echo $msg;
                         }
                         print_r($msg);
