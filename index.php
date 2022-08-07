@@ -53,6 +53,8 @@ $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
                             $msg = error_get_last()['message'];
                             echo $msg;
                         }
+                        print_r($msg);
+                        print_r(error_get_last());
                         $sql = "select * from `subscriber` order by id desc";
                         $result = mysqli_query($con, $sql);
                         if ($result) {
