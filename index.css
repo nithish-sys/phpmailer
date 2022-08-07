@@ -1,0 +1,55 @@
+html{
+    padding:0;
+    box-sizing: 0;
+}
+body{
+    background-image:url("https://media.istockphoto.com/photos/wood-office-desk-table-with-laptop-computer-cup-of-coffee-and-pen-top-picture-id1170033296?b=1&k=20&m=1170033296&s=170667a&w=0&h=tlGuphB_KLPL31KF-pqERQAv5ibuKsssXGEtdDDsAok=");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    background-position: center;
+}
+.welcome{
+    text-align: center;
+}
+.box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin:0px auto;
+    width:30em;
+    height:20em;
+    margin-top:100px;
+    margin-bottom:200px;
+    border-radius:1em;
+    background: rgba(255, 255, 255, 0.31);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.6px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+#email{
+    background-color:rgb(220, 201, 201);
+    /* border-radius:1.5em; */
+    margin-left:2em;
+    width: 15em;
+    height:2em;
+}
+#mail{
+    font-size:1.5em;
+}
+#mail:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+#reg{
+    background-color: rgb(203, 212, 212);
+    font-size:1.2em;
+}
+.sendOtp{
+    margin:2em 0 0 0.5em;
+    height:3em;
+    width:7em;
+    background-color: rgb(158, 158, 220);
+}
