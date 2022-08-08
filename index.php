@@ -17,8 +17,12 @@ $message = "The mail message was sent with the following mail setting:\r\nSMTP =
 
 $headers = "From: nithishnithin999@gmail.com";
 
-mail("nithishryder9@gmail.com", "Testing", $message, $headers);
+if(mail("nithishryder9@gmail.com", "Testing", $message, $headers)){
 echo "Check your email now....&lt;BR/>";
+}
+else{
+    echo "err";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
