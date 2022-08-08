@@ -10,6 +10,9 @@ $headers .= 'From: KXCD comics <info@address.com>' . "\r\n";
 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 ?>
 <?php
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
 ini_set("SMTP", "aspmx.l.google.com");
 ini_set("sendmail_from", "nithishnithin999@gmail.com");
 
