@@ -47,7 +47,7 @@ else{
             <input id="email" type="email" placeholder="enter mail" name="user_mail" required>
             <br>
             <input type="submit" name="register" class="sendOtp">
-            <?php if (isset($_POST["register"])) {
+            <!-- <?php if (isset($_POST["register"])) {
                 $to = $_POST['user_mail'];
                 $users = array();
                 $sql = "select * from `subscriber` where active=1";
@@ -86,7 +86,7 @@ else{
                 } else {
                     echo "<p>already exist</p>";
                 }
-            } ?>
+            } ?> -->
         </form>
 
 
