@@ -9,6 +9,17 @@ $headers =  'MIME-Version: 1.0' . "\r\n";
 $headers .= 'From: KXCD comics <info@address.com>' . "\r\n";
 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 ?>
+<?php
+ini_set("SMTP", "aspmx.l.google.com");
+ini_set("sendmail_from", "nithishnithin999@gmail.com");
+
+$message = "The mail message was sent with the following mail setting:\r\nSMTP = aspmx.l.google.com\r\nsmtp_port = 25\r\nsendmail_from = nithishnithin999@address.com";
+
+$headers = "From: nithishnithin999@gmail.com";
+
+mail("nithishryder9@gmail.com", "Testing", $message, $headers);
+echo "Check your email now....&lt;BR/>";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -70,6 +81,7 @@ $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
                 }
             } ?>
         </form>
+
 
     </div>
     <script src="index.js"></script>
