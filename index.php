@@ -10,21 +10,43 @@ $headers .= 'From: KXCD comics <info@address.com>' . "\r\n";
 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 ?>
 <?php
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
-ini_set("SMTP", "aspmx.l.google.com");
-ini_set("sendmail_from", "nithishnithin999@gmail.com");
+require("smtp.php");
+require("sasl.php"); //SASL authentication
+$from="support@yourwebsite.com";
+$smtp=new smtp_class;
+$smtp->host_name="www.website.com"; // Or IP address
+$smtp->host_port=25;
+$smtp->ssl=0;
+$smtp->start_tls=0;
+$smtp->localhost="localhost";
+$smtp->direct_delivery=0;
+$smtp->timeout=10;
+$smtp->data_timeout=0;
+$smtp->debug=1;
+$smtp->html_debug=1;
+$smtp->pop3_auth_host="";
+$smtp->user="support@website.com"; // SMTP Username
+$smtp->realm="";
+$smtp->password="password"; // SMTP Password
+$smtp->workstation="";
+$smtp->authentication_mechanism="";
 
-$message = "The mail message was sent with the following mail setting:\r\nSMTP = aspmx.l.google.com\r\nsmtp_port = 25\r\nsendmail_from = nithishnithin999@address.com";
-
-$headers = "From: nithishnithin999@gmail.com";
-
-if(mail("Sending@provider.com", "Testing", $message, $headers)){
-echo "Check your email now....&lt;BR/>";
+if($smtp->SendMessage(
+$from,
+array(
+$to
+),
+array(
+"From: $from",
+"To: $to",
+"Subject: $subject"
+),
+"$message"))
+{
+echo "Message sent to $to OK.";
 }
 else{
-    echo "err";
+echo "Cound not seend the message to $to.\nError: ".$smtp->error;
 }
 ?>
 <!DOCTYPE html>
